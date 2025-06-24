@@ -10,7 +10,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="bg-white dark:bg-[#0f172a] shadow-sm sticky top-0 z-50 border-b border-gray-200 dark:border-slate-700">
+    <header className="shadow-sm 0 top-0 z-50 border-b border-gray-200 dark:border-slate-700">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
 
         <Link href="/">
@@ -78,7 +78,9 @@ export const Navbar = () => {
               </div>
             </SheetContent>
           </Sheet>
+          <ThemeToggle/>
         </div>
+        
       </div>
     </header>
   )

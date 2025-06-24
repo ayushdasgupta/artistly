@@ -17,16 +17,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col">
+      <body>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          defaultTheme="light"
         >
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <div className="bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-slate-950 min-h-screen">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </div>
           <Toaster richColors position="top-right" />
         </ThemeProvider>
       </body>

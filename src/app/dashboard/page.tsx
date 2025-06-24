@@ -73,7 +73,7 @@ export default function DashboardPage() {
   })
 
   return (
-    <div className="max-w-6xl mx-auto p-6 text-gray-900 dark:text-gray-100">
+    <div className="max-w-6xl min-h-[75vh] mx-auto p-6 text-gray-900 dark:text-gray-100">
       <h1 className="text-2xl font-bold mb-6">Artist Submissions</h1>
       <ArtistTable data={artists} columns={columns} />
 

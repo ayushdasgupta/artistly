@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export const Footer = () => {
   return (
-    <footer className="bg-gray-50 dark:bg-[#0f172a] mt-12 border-t border-gray-200 dark:border-slate-700">
+    <footer className="mt-12 border-t border-gray-200 dark:border-slate-700">
       <div className="max-w-7xl mx-auto px-4 py-8 text-center">
         <p className="text-sm text-muted-foreground dark:text-gray-400">
           &copy; {new Date().getFullYear()} Artistly. All rights reserved.

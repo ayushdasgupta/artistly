@@ -6,9 +6,9 @@ import { CategoryCard } from "@/components/home/CatagoryCard"
 
 export default function HomePage() {
   return (
-    <div>
+    <div >
 
-      <section className="flex-1 flex flex-col items-center justify-center text-center py-24 px-4 bg-gradient-to-b from-blue-50 to-white dark:from-slate-900 dark:to-slate-950 transition-colors">
+      <section className="flex-1 flex flex-col items-center justify-center text-center py-24 px-4 transition-colors">
         <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
           Find & Book Talented Artists
         </h2>
@@ -20,7 +20,7 @@ export default function HomePage() {
         </Link>
       </section>
 
-      <section className="py-16 bg-gray-50 dark:bg-slate-900 transition-colors">
+      <section className="py-16  transition-colors">
         <div className="max-w-6xl mx-auto px-4">
           <h3 className="text-2xl font-semibold mb-8 text-center text-gray-900 dark:text-white">
             Explore by Category
