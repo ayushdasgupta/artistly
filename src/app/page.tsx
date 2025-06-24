@@ -16,7 +16,7 @@ export default function HomePage() {
           Discover top singers, dancers, speakers, and DJs for your next event.
         </p>
         <Link href="/artists">
-          <Button size="lg">Browse Artists</Button>
+          <Button className="cursor-pointer" size="lg">Browse Artists</Button>
         </Link>
       </section>
 

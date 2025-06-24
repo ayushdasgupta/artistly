@@ -25,6 +25,7 @@ import {
 } from "@/components/ui/form"
 import { useState } from "react"
 import { toast } from "sonner"
+import { locations } from "@/lib/dummyData"
 
 const categories = ["Singers", "Dancers", "DJs", "Speakers"]
 const languages = ["English", "Hindi", "Bengali", "Tamil"]
@@ -203,7 +204,18 @@ export default function OnboardingPage() {
               <FormItem>
                 <FormLabel>Location</FormLabel>
                 <FormControl>
-                  <Input {...field} className="bg-white dark:bg-slate-800" />
+                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <SelectTrigger className="bg-white dark:bg-slate-800">
+                      <SelectValue placeholder="Select City" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white dark:bg-slate-800">
+                      {locations.map((city) => (
+                        <SelectItem key={city} value={city}>
+                          {city}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -211,7 +223,7 @@ export default function OnboardingPage() {
           />
 
           <div>
-            <Label>Profile Image (Optional)</Label>
+            <Label className="pb-3">Profile Image (Optional)</Label>
             <Input
               type="file"
               className="bg-white dark:bg-slate-800"
