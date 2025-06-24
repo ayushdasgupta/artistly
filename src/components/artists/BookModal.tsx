@@ -34,20 +34,29 @@ export function BookModal({ artistId, open, onClose, onBook }: Props) {
     onClose()
   }
 
-useEffect(() => {
-  if (!open) form.reset()
-}, [open, form])
+  useEffect(() => {
+    if (!open) form.reset()
+  }, [open, form])
+
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md animate-in fade-in zoom-in duration-200">
+      <DialogContent className="sm:max-w-md animate-in fade-in zoom-in duration-200 bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-100">
         <DialogHeader>
           <DialogTitle>Request a Quote</DialogTitle>
         </DialogHeader>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-          <Input placeholder="Your Name" {...form.register("name")} />
-          <Input placeholder="Your Email" {...form.register("email")} />
+          <Input
+            placeholder="Your Name"
+            {...form.register("name")}
+            className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-700 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+          />
+          <Input
+            placeholder="Your Email"
+            {...form.register("email")}
+            className="bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-700 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+          />
           <textarea
-            className="w-full border rounded-md p-2"
+            className="w-full border rounded-md p-2 bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-700 text-gray-900 dark:text-gray-100 placeholder:text-gray-500 dark:placeholder:text-gray-400"
             rows={3}
             placeholder="Message"
             {...form.register("message")}

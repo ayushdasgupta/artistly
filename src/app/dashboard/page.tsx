@@ -39,7 +39,6 @@ export default function DashboardPage() {
   }
 
   const handleBookingCleared = () => {
-    // re-fetch booking count when cleared
     const getAllArtists = () => {
       const dummy = dummyArtists
       const local = JSON.parse(localStorage.getItem("artistly-onboarded") || "[]")
@@ -62,7 +61,7 @@ export default function DashboardPage() {
         ...col,
         cell: (row: Artist) => (
           <button
-            className="text-sm text-blue-600 hover:underline"
+            className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
             onClick={() => handleView(row)}
           >
             View
@@ -74,7 +73,7 @@ export default function DashboardPage() {
   })
 
   return (
-    <div className="max-w-6xl mx-auto p-6">
+    <div className="max-w-6xl mx-auto p-6 text-gray-900 dark:text-gray-100">
       <h1 className="text-2xl font-bold mb-6">Artist Submissions</h1>
       <ArtistTable data={artists} columns={columns} />
 

@@ -15,12 +15,14 @@ type Props<T> = {
 
 export function ArtistTable<T>({ data, columns }: Props<T>) {
   return (
-    <div className="border rounded-lg overflow-x-auto">
+    <div className="border rounded-lg overflow-x-auto bg-white dark:bg-slate-900 text-gray-900 dark:text-gray-100">
       <Table>
-        <TableHeader>
+        <TableHeader className="bg-gray-100 dark:bg-slate-800">
           <TableRow>
             {columns.map((col, idx) => (
-              <TableHead key={idx}>{col.header}</TableHead>
+              <TableHead key={idx} className="text-gray-700 dark:text-gray-300">
+                {col.header}
+              </TableHead>
             ))}
           </TableRow>
         </TableHeader>
@@ -28,7 +30,10 @@ export function ArtistTable<T>({ data, columns }: Props<T>) {
           {data.map((row, rowIndex) => (
             <TableRow key={rowIndex}>
               {columns.map((col, colIndex) => (
-                <TableCell key={colIndex}>
+                <TableCell
+                  key={colIndex}
+                  className="text-gray-800 dark:text-gray-100"
+                >
                   {col.cell(row)}
                 </TableCell>
               ))}

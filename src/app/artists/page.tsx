@@ -12,7 +12,6 @@ export default function ArtistListingPage() {
   const [artists, setArtists] = useState(dummyArtists)
 
   useEffect(() => {
-    // Run only on client
     const local = JSON.parse(localStorage.getItem("artistly-onboarded") || "[]")
     setArtists([...dummyArtists, ...local])
   }, [])
@@ -26,7 +25,7 @@ export default function ArtistListingPage() {
   })
 
   return (
-    <div className="max-w-7xl mx-auto p-4">
+    <div className="max-w-7xl mx-auto p-4 text-gray-900 dark:text-gray-100">
       <h1 className="text-2xl font-bold mb-4">Browse Artists</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -52,10 +51,10 @@ export default function ArtistListingPage() {
 
       <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {filteredArtists.map((artist) => (
-          <ArtistCard key={artist.id} {...artist}  profileImage={artist.profileImage ?? undefined} />
+          <ArtistCard key={artist.id} {...artist} profileImage={artist.profileImage ?? undefined} />
         ))}
         {filteredArtists.length === 0 && (
-          <p className="text-muted-foreground col-span-full text-center">No artists found.</p>
+          <p className="text-muted-foreground dark:text-gray-400 col-span-full text-center">No artists found.</p>
         )}
       </div>
     </div>

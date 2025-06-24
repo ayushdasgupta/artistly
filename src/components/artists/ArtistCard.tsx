@@ -45,7 +45,7 @@ export const ArtistCard = ({
   }
 
   return (
-    <div className="border rounded-xl p-5 shadow-sm bg-white relative space-y-3">
+    <div className="border rounded-xl p-5 shadow-sm bg-white dark:bg-slate-800 relative space-y-3 text-gray-900 dark:text-gray-100">
 
       {profileImage ? (
         <Image
@@ -56,7 +56,7 @@ export const ArtistCard = ({
           className="w-full h-48 object-cover rounded-md"
         />
       ) : (
-        <div className="w-full h-48 bg-gray-100 text-gray-600 flex items-center justify-center rounded-md text-4xl font-bold uppercase">
+        <div className="w-full h-48 bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-300 flex items-center justify-center rounded-md text-4xl font-bold uppercase">
           {name
             .split(" ")
             .map(word => word[0])
@@ -65,17 +65,15 @@ export const ArtistCard = ({
         </div>
       )}
 
-      {/* Name & Basic Info */}
       <div>
         <h3 className="font-semibold text-xl">{name}</h3>
-        <p className="text-sm text-muted-foreground">{category} • {location}</p>
-        <p className="text-sm text-muted-foreground">Speaks: {languages}</p>
+        <p className="text-sm text-muted-foreground dark:text-gray-400">{category} • {location}</p>
+        <p className="text-sm text-muted-foreground dark:text-gray-400">Speaks: {languages}</p>
       </div>
 
+      <p className="text-sm text-gray-700 dark:text-gray-300">{bio}</p>
 
-      <p className="text-sm text-gray-700">{bio}</p>
-
-      <p className="text-sm text-muted-foreground">Fee: {feeRange}</p>
+      <p className="text-sm text-muted-foreground dark:text-gray-400">Fee: {feeRange}</p>
 
       {isBooked ? (
         <div className="space-y-2 pt-2">
@@ -97,7 +95,6 @@ export const ArtistCard = ({
         </Button>
       )}
 
-      {/* Modal */}
       <BookModal
         artistId={id}
         open={open}

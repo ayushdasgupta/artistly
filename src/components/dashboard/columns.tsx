@@ -20,7 +20,7 @@ export const columns: Column<Artist>[] = [
   {
     header: "Bookings",
     cell: (row) => (
-      <span className="font-medium text-blue-600">
+      <span className="font-medium text-blue-600 dark:text-blue-400">
         {row.bookingCount || 0}
       </span>
     ),
@@ -30,7 +30,7 @@ export const columns: Column<Artist>[] = [
     cell: (row) => (
       <button
         onClick={() => alert(`Viewing ${row.name}`)}
-        className="text-sm text-gray-700 hover:text-blue-600"
+        className="text-sm text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
       >
         View
       </button>
