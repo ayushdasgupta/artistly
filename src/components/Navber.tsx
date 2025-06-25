@@ -10,7 +10,7 @@ export const Navbar = () => {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="shadow-sm 0 top-0 z-50 border-b border-gray-200 dark:border-slate-700">
+   <header className="sticky top-0 z-50 backdrop-blur bg-white/30 dark:bg-slate-900/30 border-b border-gray-200 dark:border-slate-700 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
 
         <Link href="/">

@@ -11,7 +11,7 @@ Artistly is a modern, responsive talent booking platform built with **Next.js 15
 - 📝 Multi-step artist onboarding form (React Hook Form + Zod)
 - 🧮 Manager dashboard with booking analytics
 - 🧾 Booking modal with approve/decline and localStorage sync
-<!-- - 🌗 Full dark mode support -->
+- 🌗 Full dark mode support
 - ⚡ Fast, responsive UI with component reuse
 - 💾 LocalStorage used as mock backend for persistence
 
@@ -44,3 +44,28 @@ Artistly is a modern, responsive talent booking platform built with **Next.js 15
 ```bash
 git clone https://github.com/your-username/artistly.git
 cd artistly
+npm install
+```
+*It installs all the necessary modules required to run the code.*
+## 2. For Development
+```bash
+npm run dev
+```
+*It opens in your browser at http://localhost:3000 with a live preview.*
+## 3. For Deployment 
+
+```bash
+npm run build
+npm rnun start
+```
+*It opens in your browser at http://localhost:3000.*
+## 🧪 To Test
+- Submit a new artist via ```/onboard```
+- See them appear in ```/artists``` and ```/dashboard```
+- Click **"Ask for Quote"** → submit form
+- Booking gets stored and shown in dashboard
+- Try **approve/decline** to remove the booking
+
+## Author
+
+- Made with ❤️ by  [@ayush](https://www.github.com/ayushdasgupta)
