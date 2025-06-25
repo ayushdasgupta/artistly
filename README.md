@@ -27,7 +27,7 @@ Artistly is a modern, responsive talent booking platform built with **Next.js 15
 
 ## 🛠 Tech Stack
 
-- **Next.js 13+** (App Router)
+- **Next.js 15+** (App Router)
 - **React Functional Components**
 - **Tailwind CSS** (utility-first styling)
 - **ShadCN UI** (accessible and themeable components)
@@ -42,7 +42,7 @@ Artistly is a modern, responsive talent booking platform built with **Next.js 15
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/artistly.git
+git clone https://github.com/ayushdasgupta/artistly.git
 cd artistly
 npm install
 ```
@@ -56,9 +56,18 @@ npm run dev
 
 ```bash
 npm run build
-npm rnun start
+npm run start
 ```
 *It opens in your browser at http://localhost:3000.*
+
+## 🌍 Live Preview
+
+You can view the live app here:  
+🔗 [https://artistly-ruddy.vercel.app](https://artistly-ruddy.vercel.app)
+
+ Hosted on [Vercel](https://vercel.com)
+
+
 ## 🧪 To Test
 - Submit a new artist via ```/onboard```
 - See them appear in ```/artists``` and ```/dashboard```
